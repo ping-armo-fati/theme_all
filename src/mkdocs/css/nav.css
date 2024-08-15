@@ -1,0 +1,34 @@
+/* 设置导航栏 */
+/* 设置不同级别导航链接的底纹颜色 */
+.md-nav {
+    background: none; /* 移除默认背景，以便看到底纹 */
+}
+
+/* 重置链接背景色为透明 */
+.md-nav__link {
+    background: transparent;
+    padding-left: 0.8rem;
+    border-radius: 0.5rem;
+}
+
+nav.md-nav.md-nav--nav__primary > .md-nav__list > .md-nav__item {
+    background-color: #F8F8F8!important; /*浅灰*/
+    border-radius: 0.2rem;
+}
+
+.md-nav__primary > .md-nav__list > .md-nav__item {
+    background-color: var(--top-level-bg);
+}
+
+.md-tabs__link {
+    font-size:1.25rem!important;
+    font-weight:bold;
+}
+
+.md-tabs {
+    height:70px;
+}
+
+.md-tabs__item{
+    height:2.8rem;
+}

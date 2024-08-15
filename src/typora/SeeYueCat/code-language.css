@@ -1,0 +1,802 @@
+@import "fonts.css";
+
+/* 仿 Mac 设计（代码块） */
+pre.md-fences:after {
+  content: ' ';
+  background: #fc625d;
+  box-shadow: 25px 0 #fdbc40, 50px 0 #35cd4b;
+  border-radius: 50%;
+  position: absolute;
+  top: -24px;
+  right: 60px;
+  height: 12px;
+  width: 12px;
+}
+
+#write pre.md-fences {
+  border-top: 40px solid rgb(167, 187, 195, 0.6);
+}
+
+/* 代码语言显示 */
+pre::before {
+  font-family: 'Lora-Regular';
+  position: absolute;
+  top: -34px;
+  font-weight: bold;
+  left: 5%;
+  z-index: 99;
+  font-size: 1rem;
+  /* 字间距 */
+  letter-spacing: 1px;
+}
+
+pre[lang$='TXT']:before,
+pre[lang$='txt']:before {
+  content: 'TXT';
+}
+
+/* 以下为代码语言显示语句 */
+/* —————————————————————————————————————————————————————————A————————————————————————————————————————————————————————— */
+pre[lang$='ABAP']:before,
+pre[lang$='abap']:before {
+  content: 'ABAP';
+}
+
+pre[lang$='apl']:before,
+pre[lang$='APL']:before {
+  content: 'APL';
+}
+
+pre[lang$='asciiarmor']:before,
+pre[lang$='ASCIIARMOR']:before {
+  content: 'ASCII-Armor';
+}
+
+pre[lang$='ASN.1']:before,
+pre[lang$='asn.1']:before {
+  content: 'ASN.1';
+}
+
+pre[lang$='asp']:before,
+pre[lang$='ASP']:before {
+  content: 'ASP';
+}
+
+/* —————————————————————————————————————————————————————————B————————————————————————————————————————————————————————— */
+pre[lang$='bash']:before,
+pre[lang$='Bash']:before {
+  content: 'Bash';
+}
+
+pre[lang$='basic']:before,
+pre[lang$='Basic']:before {
+  content: 'BASIC';
+}
+
+
+/* —————————————————————————————————————————————————————————C————————————————————————————————————————————————————————— */
+pre[lang$='C']:before,
+pre[lang$='c']:before {
+  content: 'C';
+}
+
+pre[lang$='c#']:before,
+pre[lang$='C#']:before,
+pre[lang$='csharp']:before,
+pre[lang$='CSharp']:before {
+  content: 'C#';
+}
+
+pre[lang$='c++']:before,
+pre[lang$='C++']:before,
+pre[lang$='CPP']:before,
+pre[lang$='cpp']:before {
+  content: 'C#';
+}
+
+pre[lang$='cassandra']:before,
+pre[lang$='Cassandra']:before {
+  content: 'Cassandra';
+}
+
+pre[lang$='ceylon']:before,
+pre[lang$='Ceylon']:before {
+  content: 'Ceylon';
+}
+
+pre[lang$='clike']:before,
+pre[lang$='Clike']:before {
+  content: 'C-like';
+}
+
+pre[lang$='clojure']:before,
+pre[lang$='clojure']:before {
+  content: 'Clojure';
+}
+
+pre[lang$='CMake']:before,
+pre[lang$='cmake']:before {
+  content: 'CMake';
+}
+
+pre[lang$='cobol']:before,
+pre[lang$='COBOL']:before {
+  content: 'COBOL';
+}
+
+pre[lang$='coffeescript']:before,
+pre[lang$='CoffeeScript']:before {
+  content: 'CoffeeScript';
+}
+
+pre[lang$='commonlisp']:before,
+pre[lang$='CommonLisp']:before {
+  content: 'Common Lisp';
+}
+
+pre[lang$='CQL']:before,
+pre[lang$='cql']:before {
+  content: 'CQL';
+}
+
+pre[lang$='crystal']:before,
+pre[lang$='Crystal']:before {
+  content: 'Crystal';
+}
+
+pre[lang$='css']:before,
+pre[lang$='CSS']:before {
+  content: 'CSS';
+}
+
+pre[lang$='cypher']:before,
+pre[lang$='Cypher']:before {
+  content: 'Cypher';
+}
+
+pre[lang$='cython']:before,
+pre[lang$='Cython']:before {
+  content: 'Cython';
+}
+
+
+/* —————————————————————————————————————————————————————————D————————————————————————————————————————————————————————— */
+pre[lang$='D']:before,
+pre[lang$='d']:before {
+  content: 'D';
+}
+
+pre[lang$='dart']:before,
+pre[lang$='Dart']:before {
+  content: 'Dart';
+}
+
+pre[lang$='diff']:before,
+pre[lang$='Diff']:before {
+  content: 'Diff';
+}
+
+pre[lang$='django']:before,
+pre[lang$='Django']:before {
+  content: 'Django';
+}
+
+pre[lang$='dockerfile']:before,
+pre[lang$='Dockerfile']:before {
+  content: 'Dockerfile';
+}
+
+pre[lang$='dtd']:before,
+pre[lang$='DTD']:before {
+  content: 'DTD';
+}
+
+pre[lang$='Dylan']:before,
+pre[lang$='dylan']:before {
+  content: 'Dylan';
+}
+
+
+/* —————————————————————————————————————————————————————————E————————————————————————————————————————————————————————— */
+pre[lang$='elixir']:before,
+pre[lang$='Elixir']:before {
+  content: 'Elixir';
+}
+
+pre[lang$='Elm']:before,
+pre[lang$='elm']:before {
+  content: 'Elm';
+}
+
+pre[lang$='Embedded JS']:before,
+pre[lang$='embeddedjs']:before {
+  content: 'Embedded JS';
+}
+
+pre[lang$='erlang']:before,
+pre[lang$='Erlang']:before {
+  content: 'Erlang';
+}
+
+
+/* —————————————————————————————————————————————————————————F————————————————————————————————————————————————————————— */
+pre[lang$='F#']:before,
+pre[lang$='f#']:before,
+pre[lang$='fsharp']:before,
+pre[lang$='Fsharp']:before {
+  content: 'F#';
+}
+
+pre[lang$='flow']:before,
+pre[lang$='Flow']:before {
+  content: 'Flow';
+}
+
+pre[lang$='forth']:before,
+pre[lang$='Forth']:before {
+  content: 'Forth';
+}
+
+pre[lang$='fortran']:before,
+pre[lang$='Fortran']:before {
+  content: 'Fortran';
+}
+
+
+/* —————————————————————————————————————————————————————————G————————————————————————————————————————————————————————— */
+pre[lang$='gas']:before,
+pre[lang$='Gas']:before {
+  content: 'Gas';
+}
+
+pre[lang$='gfm']:before,
+pre[lang$='GFW']:before {
+  content: 'GFW';
+}
+
+pre[lang$='gherkin']:before,
+pre[lang$='Gherkin']:before {
+  content: 'Gherkin';
+}
+
+pre[lang$='glsl']:before,
+pre[lang$='GLSL']:before {
+  content: 'GLSL';
+}
+
+pre[lang$='Go']:before,
+pre[lang$='go']:before {
+  content: 'Go';
+}
+
+pre[lang$='Groovy']:before,
+pre[lang$='groovy']:before {
+  content: 'Groovy';
+}
+
+
+/* —————————————————————————————————————————————————————————H————————————————————————————————————————————————————————— */
+pre[lang$='handlebars']:before,
+pre[lang$='Handlebars']:before {
+  content: 'Handlebars';
+}
+
+pre[lang$='haskell']:before,
+pre[lang$='Haskell']:before {
+  content: 'Haskell';
+}
+
+pre[lang$='haxe']:before,
+pre[lang$='Haxe']:before {
+  content: 'Haxe';
+}
+
+pre[lang$='htaccess']:before,
+pre[lang$='Htaccess']:before {
+  content: 'Htaccess';
+}
+
+pre[lang$='html']:before,
+pre[lang$='HTML']:before {
+  content: 'HTML';
+}
+
+pre[lang$='HTTP']:before,
+pre[lang$='http']:before {
+  content: 'HTTP';
+}
+
+pre[lang$='hxml']:before,
+pre[lang$='HXML']:before {
+  content: 'HXML';
+}
+
+
+/* —————————————————————————————————————————————————————————I————————————————————————————————————————————————————————— */
+pre[lang$='IDL']:before,
+pre[lang$='idl']:before {
+  content: 'IDL';
+}
+
+pre[lang$='ini']:before,
+pre[lang$='INI']:before {
+  content: 'INI';
+}
+
+
+/* —————————————————————————————————————————————————————————J————————————————————————————————————————————————————————— */
+pre[lang$='jade']:before,
+pre[lang$='Jade']:before {
+  content: 'Jade';
+}
+
+pre[lang$='java']:before,
+pre[lang$='Java']:before {
+  content: 'Java';
+}
+
+pre[lang$='javascript']:before,
+pre[lang$='JavaScript']:before,
+pre[lang$='JS']:before,
+pre[lang$='js']:before {
+  content: 'JavaScript';
+}
+
+pre[lang$='jinja2']:before,
+pre[lang$='Jinja2']:before {
+  content: 'Jinja2';
+}
+
+pre[lang$='json']:before,
+pre[lang$='JSON']:before {
+  content: 'JSON';
+}
+
+pre[lang$='JSP']:before,
+pre[lang$='jsp']:before {
+  content: 'JSP';
+}
+
+pre[lang$='jsx']:before,
+pre[lang$='JSX']:before {
+  content: 'JSX';
+}
+
+
+/* —————————————————————————————————————————————————————————K————————————————————————————————————————————————————————— */
+pre[lang$='Kotlin']:before,
+pre[lang$='kotlin']:before {
+  content: 'Kotlin';
+}
+
+
+/* —————————————————————————————————————————————————————————L————————————————————————————————————————————————————————— */
+pre[lang$='LATEX']:before,
+pre[lang$='Latex']:before {
+  content: 'LaTeX';
+}
+
+pre[lang$='less']:before,
+pre[lang$='Less']:before {
+  content: 'Less';
+}
+
+pre[lang$='lisp']:before,
+pre[lang$='LISP']:before {
+  content: 'LISP';
+}
+
+pre[lang$='livescript']:before,
+pre[lang$='LiveScript']:before {
+  content: 'LiveScript';
+}
+
+pre[lang$='Lua']:before,
+pre[lang$='lua']:before {
+  content: 'Lua';
+}
+
+
+/* —————————————————————————————————————————————————————————M————————————————————————————————————————————————————————— */
+pre[lang$='makefile']:before,
+pre[lang$='Makefile']:before {
+  content: 'Makefile';
+}
+
+pre[lang$='mariadb']:before,
+pre[lang$='MariaDB']:before {
+  content: 'MariaDB';
+}
+
+pre[lang$='markdown']:before,
+pre[lang$='Markdown']:before {
+  content: 'Markdown';
+}
+
+pre[lang$='mathematica']:before,
+pre[lang$='Mathematica']:before {
+  content: 'Mathematica';
+}
+
+pre[lang$='matlab']:before,
+pre[lang$='MATLAB']:before {
+  content: 'MATLAB';
+}
+
+pre[lang$='mbox']:before,
+pre[lang$='MBOX']:before {
+  content: 'MBOX';
+}
+
+pre[lang$='mermaid']:before,
+pre[lang$='Mermaid']:before {
+  content: 'Mermaid';
+}
+
+pre[lang$='mssql']:before,
+pre[lang$='MSSQL']:before {
+  content: 'MSSQL';
+}
+
+pre[lang$='mysql']:before,
+pre[lang$='MySQL']:before {
+  content: 'MySQL';
+}
+
+
+/* —————————————————————————————————————————————————————————N————————————————————————————————————————————————————————— */
+pre[lang$='nginx']:before,
+pre[lang$='Nginx']:before {
+  content: 'Nginx';
+}
+
+pre[lang$='nim']:before,
+pre[lang$='Nim']:before {
+  content: 'Nim';
+}
+
+pre[lang$='nsis']:before,
+pre[lang$='NSIS']:before {
+  content: 'NSIS';
+}
+
+
+/* —————————————————————————————————————————————————————————O————————————————————————————————————————————————————————— */
+pre[lang$='objc']:before,
+pre[lang$='Obj-C']:before,
+pre[lang$='objective-c']:before,
+pre[lang$='Objective-C']:before {
+  content: 'Objective-C';
+}
+
+pre[lang$='ocaml']:before,
+pre[lang$='OCaml']:before {
+  content: 'OCaml';
+}
+
+pre[lang$='octave']:before,
+pre[lang$='Octave']:before {
+  content: 'Octave';
+}
+
+pre[lang$='Oz']:before,
+pre[lang$='oz']:before {
+  content: 'Oz';
+}
+
+
+/* —————————————————————————————————————————————————————————P————————————————————————————————————————————————————————— */
+pre[lang$='pascal']:before,
+pre[lang$='Pascal']:before {
+  content: 'Pascal';
+}
+
+pre[lang$='perl']:before,
+pre[lang$='Perl']:before {
+  content: 'Perl';
+}
+
+pre[lang$='perl6']:before,
+pre[lang$='Perl 6']:before {
+  content: 'Perl 6';
+}
+
+pre[lang$='PGP']:before,
+pre[lang$='pgp']:before {
+  content: 'PGP';
+}
+
+pre[lang$='php']:before,
+pre[lang$='PHP']:before {
+  content: 'PHP';
+}
+
+pre[lang$='php+HTML']:before {
+  content: 'PHP+HTML';
+}
+
+pre[lang$='plsql']:before,
+pre[lang$='PL/SQL']:before {
+  content: 'PL/SQL';
+}
+
+pre[lang$='powershell']:before,
+pre[lang$='PowerShell']:before {
+  content: 'PowerShell';
+}
+
+pre[lang$='properties']:before,
+pre[lang$='Properties']:before {
+  content: 'Properties';
+}
+
+pre[lang$='protobuf']:before,
+pre[lang$='Protobuf']:before {
+  content: 'Protobuf';
+}
+
+pre[lang$='pseudocode']:before,
+pre[lang$='Pseudocode']:before {
+  content: 'Pseudocode';
+}
+
+pre[lang$='python']:before,
+pre[lang$='Python']:before {
+  content: 'Python';
+}
+
+pre[lang$='Kotlin']:before,
+pre[lang$='kotlin']:before {
+  content: 'Kotlin';
+}
+
+
+/* —————————————————————————————————————————————————————————Q————————————————————————————————————————————————————————— */
+pre[lang$='Q']:before,
+pre[lang$='q']:before {
+  content: 'Q';
+}
+
+
+/* —————————————————————————————————————————————————————————R————————————————————————————————————————————————————————— */
+pre[lang$='R']:before,
+pre[lang$='r']:before {
+  content: 'R';
+}
+
+pre[lang$='react']:before,
+pre[lang$='kotlin']:before {
+  content: 'React';
+}
+
+pre[lang$='reStructuredText']:before,
+pre[lang$='restructuredtext']:before,
+pre[lang$='rst']:before {
+  content: 'reStructuredText';
+}
+
+pre[lang$='ruby']:before,
+pre[lang$='Ruby']:before {
+  content: 'Ruby';
+}
+
+pre[lang$='Rust']:before,
+pre[lang$='rust']:before {
+  content: 'Rust';
+}
+
+
+/* —————————————————————————————————————————————————————————S————————————————————————————————————————————————————————— */
+pre[lang$='SAS']:before,
+pre[lang$='sas']:before {
+  content: 'SAS';
+}
+
+pre[lang$='scala']:before,
+pre[lang$='Scala']:before {
+  content: 'Scala';
+}
+
+pre[lang$='scheme']:before,
+pre[lang$='Scheme']:before {
+  content: 'Scheme';
+}
+
+pre[lang$='scss']:before,
+pre[lang$='Sass']:before {
+  content: 'Sass';
+}
+
+pre[lang$='sequence']:before,
+pre[lang$='Sequence']:before {
+  content: 'Sequence';
+}
+
+pre[lang^='sh']:before,
+pre[lang^='SH']:before,
+pre[lang$='shell']:before {
+  content: 'Shell';
+}
+
+pre[lang$='smalltalk']:before,
+pre[lang$='Smalltalk']:before {
+  content: 'Smalltalk';
+}
+
+pre[lang$='solidity']:before,
+pre[lang$='Solidity']:before {
+  content: 'Solidity';
+}
+
+pre[lang$='SPARQL']:before,
+pre[lang$='sparql']:before {
+  content: 'SPARQL';
+}
+
+pre[lang$='spreadsheet']:before,
+pre[lang$='Spreadsheet']:before {
+  content: 'Spreadsheet';
+}
+
+pre[lang$='sql']:before,
+pre[lang$='SQL']:before {
+  content: 'SQL';
+}
+
+pre[lang$='sqlite']:before,
+pre[lang$='SQLite']:before {
+  content: 'SQLite';
+}
+
+pre[lang$='stylus']:before,
+pre[lang$='Stylus']:before {
+  content: 'Stylus';
+}
+
+pre[lang$='swift']:before,
+pre[lang$='Swift']:before {
+  content: 'Swift';
+}
+
+
+/* —————————————————————————————————————————————————————————T————————————————————————————————————————————————————————— */
+pre[lang$='tcl']:before,
+pre[lang$='TCL']:before {
+  content: 'TCL';
+}
+
+pre[lang$='tex']:before,
+pre[lang$='TeX']:before {
+  content: 'TeX';
+}
+
+pre[lang$='tiddlywiki']:before,
+pre[lang$='TiddlyWiki']:before {
+  content: 'TiddlyWiki';
+}
+
+pre[lang$='tiki wiki']:before,
+pre[lang$='Tikiwiki']:before {
+  content: 'Tikiwiki';
+}
+
+pre[lang$='toml']:before,
+pre[lang$='TOML']:before {
+  content: 'TOML';
+}
+
+pre[lang$='tsx']:before,
+pre[lang$='TSX']:before {
+  content: 'TSX';
+}
+
+pre[lang$='turtle']:before,
+pre[lang$='Turtle']:before {
+  content: 'Turtle';
+}
+
+pre[lang$='twig']:before,
+pre[lang$='Twig']:before {
+  content: 'Twig';
+}
+
+pre[lang$='TypeScript']:before,
+pre[lang$='typescript']:before,
+pre[lang$='ts']:before,
+pre[lang$='TS']:before {
+  content: 'TypeScript';
+}
+
+
+/* —————————————————————————————————————————————————————————U————————————————————————————————————————————————————————— */
+
+
+/* —————————————————————————————————————————————————————————V————————————————————————————————————————————————————————— */
+pre[lang$='V']:before,
+pre[lang$='v']:before {
+  content: 'V';
+}
+
+pre[lang$='vb']:before,
+pre[lang$='VB']:before {
+  content: 'VB';
+}
+
+pre[lang$='VBScript']:before,
+pre[lang$='vbscript']:before {
+  content: 'VBScript';
+}
+
+pre[lang$='velocity']:before,
+pre[lang$='Velocity']:before {
+  content: 'Velocity';
+}
+
+pre[lang$='verilog']:before,
+pre[lang$='Verilog']:before {
+  content: 'Verilog';
+}
+
+pre[lang$='vhdl']:before,
+pre[lang$='VHDL']:before {
+  content: 'VHDL';
+}
+
+pre[lang$='visual basic']:before,
+pre[lang$='Visual Basic']:before {
+  content: 'Visual Basic';
+}
+
+pre[lang$='vue']:before,
+pre[lang$='Vue']:before {
+  content: 'Vue';
+}
+
+
+/* —————————————————————————————————————————————————————————W————————————————————————————————————————————————————————— */
+pre[lang$='web-idl']:before,
+pre[lang$='Web IDL']:before {
+  content: 'Web IDL';
+}
+
+pre[lang$='wiki']:before,
+pre[lang$='Wiki']:before {
+  content: 'Wiki';
+}
+
+
+/* —————————————————————————————————————————————————————————X————————————————————————————————————————————————————————— */
+pre[lang$='xaml']:before,
+pre[lang$='XAML']:before {
+  content: 'XAML';
+}
+
+pre[lang$='xml']:before,
+pre[lang$='XML']:before {
+  content: 'XML';
+}
+
+pre[lang$='xml-dtd']:before,
+pre[lang$='XML DTD']:before {
+  content: 'XML DTD';
+}
+
+pre[lang$='xquery']:before,
+pre[lang$='XQuery']:before {
+  content: 'XQuery';
+}
+
+
+/* —————————————————————————————————————————————————————————Y————————————————————————————————————————————————————————— */
+pre[lang$='yacas']:before,
+pre[lang$='Yacas']:before {
+  content: 'Yacas';
+}
+
+pre[lang$='yaml']:before,
+pre[lang$='YAML']:before {
+  content: 'YAML';
+}
+
+
+/* —————————————————————————————————————————————————————————Z————————————————————————————————————————————————————————— */
