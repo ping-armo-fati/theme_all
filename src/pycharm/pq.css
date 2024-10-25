@@ -1,388 +1,450 @@
-/* 尚未调试成功 */
-/* 高级蓝灰色 */
+html {
+  font-size: 22px;
+}
+
 :root {
-    --advanced-blue-gray: #5f7d95;
-    --light-orange: #ffa500;
-    --light-beige: #f5f5dc; /* 浅米色 */
-    --light-purple:#D8BFD8;
+  --primary-head:   #0D6E6E;
+  --primary-light:  #4a9d9c;
+  --primary-ll:     #afffff;
+  --accent:         #fd7777;
+  --accent-light:   #ffe0c8;
+  --text-light:     #FFFFFF;
+  --text-dark:      #e0e0e0;
+  --bg-bp:          #0D1F2D;
+  --bg-code:        #1d2e3d;
+  --bg-bottom:      #354656;
+
+  --bg-table-odd:   #e0e0e0;
+  --bg-table-even:  #A9A9A9;
+  /* 字体 */
+  --font-base: 'Consolas', '等线', sans-serif;
+  --font-table: 'Consolas', '等线', sans-serif;
+  --font-blockquote: 'Comic Sans MS', '楷体', cursive;
+  --font-code: "Cascadia code", "Courier New", monospace;
 }
 
-/* 所有标题字体颜色为高级蓝灰色，字体为等线 */
-h1, h2, h3 {
-    color: var(--advanced-blue-gray);
-    font-family: 'Consolas', '等线', sans-serif;
-}
-
-/* 一级标题居中，有下划线，字体更大 */
+/* 标题 */
 h1 {
-    text-align: center;
-    font-size: 32px;
+  color: var(--primary-head);
+  font-family: var(--font-base);
 }
 
-/* 二级标题靠左，蓝灰色底纹，白色字体 */
+h2, h3, h4, h5, h6 {
+  color: var(--primary-light);
+  font-family: var(--font-base);
+}
+
+h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
 h2 {
-    text-align: left;
-    background-color: var(--advanced-blue-gray);
-    color: white;
-    font-size: 28px;
-    display:inline-block;
-    padding: 0 10px 0 0;
+  left: 0.8rem;
+  text-align: left;
+  position: relative;
+  background-color: var(--primary-head);
+  color: var(--text-light);
+  font-size: 28px;
+  display: inline-block;
 
+  padding: 0.3rem 1rem 0.3rem 1rem;
+  margin-left: 0.3rem;
+  border-radius: 0.5rem;
 }
 
-/* 三级标题字体更小，蓝灰色字体，前面有一个蓝灰色色块用于区分 */
+h2::after {
+  display: inline-block;
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+
+  bottom: -0.6rem;
+  height: 0.15rem;
+  width: 93vw;
+  background-color: var(--primary-light);
+}
+
 h3 {
-    font-size: 24px;
-    padding-left: 30px;
-    position: relative;
+  font-size: 26px;
+  padding-left: 2.8rem;
+  position: relative;
 }
 
 h3::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 10px;
-    height: 100%;
-    background-color: var(--advanced-blue-gray);
+  content: "";
+  position: absolute;
+  left: 1.8rem;
+  top: -0.2rem;
+  width: 0.5rem;
+  height: 140%;
+  background-color: var(--primary-head);
 }
 
-/* 四级标题字体为斜体，浅橙色，字体大小为26 */
 h4 {
-    font-style: italic;
-    color: var(--light-orange);
-    font-size: 26px;
+  font-size: 24px;
 }
 
-/* 正文字体大小为18，所有英文字体为等线，所有中文字体为等线 */
+h5 {
+  font-size: 22px;
+}
+
 body {
-    font-size: 18px;
-    font-family: 'Consolas', '等线', sans-serif;
-    background-color: #FFFFFF!important;
+  font-size: 20px;
+  background-color: var(--bg-bottom)!important;
 }
-/* 区块引用：英文：手写体 中文：楷体 */
+
 blockquote {
-    font-family: 'Comic Sans MS', '楷体', cursive;
-    background-color: #ffffcc!important;
+  padding-top: 0.01rem;
+  padding-bottom: 0.005rem;
+  font-family: var(--font-blockquote);
+  background-color: var(--bg-bp);
+  border-radius: 0.7rem;
+  line-height: 1.4!important;
 }
-/*段落*/
+
+blockquote p {
+  margin-left: 0.5rem;
+}
+
 p {
-    font-size: 20px;
-    font-family: 'Consolas', '等线', sans-serif!important;
+  margin-left: 2rem;
+  font-size: 1rem;
+  color: var(--text-light)!important;
 }
+
 /*列表*/
 ul, ol {
-    font-size: 24px;
+  margin-left: 1.5rem;
+  line-height: 2;
+  font-size: 20px;
+  color: var(--text-light)!important;
 }
 
 ul ul, ol ol {
-    font-size: 22px;
+  font-size: 18px;
 }
 
 ul ul ul, ol ol ol {
-    font-size: 20px;
+  font-size: 16px;
 }
 
 ul ul ul ul, ol ol ol ol {
-    font-size: 18px;
+  font-size: 16px;
 }
-/*表格*/
- /* table */
- table
+
+/* table */
+table
 {
-    width: 95%;
-    border-collapse: collapse;
-    text-align: center;
-    font-family: 'Consolas', '等线', sans-serif;
-    margin: 20px;
+  width: 80%;
+  border-collapse: collapse!important;
+  text-align: center;
+  font-family: var(--font-table);
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.7rem!important;
 }
- table td, table th
+
+table td, table th
 {
-    border: 1px solid transparent;
-    color: rgb(18, 18, 18);
-    height: 30px;
-    padding: 10px;
-    border-radius: .5em;
-    transition: all 0.3s linear;
-    -moz-transition: all 0.3s linear;
-    -webkit-transition: all 0.3s linear;
-}
- table td {
-    font-family: 'Consolas', '等线', sans-serif;
-}
- table thead th
-{
-    background-color: var(--advanced-blue-gray);
-    font-size: 25px;
-    color: white;
-    font-weight: bolder;
-    width: 100px;
-    text-align: center;
-    vertical-align: middle;
-    padding: 10px;
-}
-table tr:nth-child(odd)
-{
-    background: rgba(211, 211, 211, 0.6);
-}
-table tr:nth-child(even)
-{
-    background: rgba(128, 128, 128, 0.6);
-}
-table td:hover {
-  background-color: magenta!important;
-  color: white !important;
-  box-shadow: 0 0 10px 5px blue;
+  border-color: transparent!important;
+  height: 30px;
+  padding: 10px;
+  border-radius: .5em;
   transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -webkit-transition: all 0.3s linear;
 }
 
+table tr{
+  border-color: transparent;
+}
 
+table thead th
+{
+  border-color: transparent!important;
+  background-color: var(--primary-head);
+  font-size: 0.9rem!important;
+  color: var(--text-light);
+  font-weight: bolder;
+  width: 100px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px;
+}
 
-/* 代码块 */
+table tr:nth-child(odd)
+{
+  background: var(--bg-table-odd);
+}
+table tr:nth-child(even)
+{
+  background: var(--bg-table-even);
+}
+
+table td:hover {
+background-color: var(--accent)!important;
+color: var(--text-light) !important;
+box-shadow: 0 0 10px 5px var(--primary-ll);
+transition: all 0.3s linear;
+-moz-transition: all 0.3s linear;
+-webkit-transition: all 0.3s linear;
+}
+
+table th:hover {
+  background-color: var(--accent-light)!important;
+  color: var(--text-light) !important;
+  box-shadow: 0 0 10px 5px var(--primary-ll);
+  transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -webkit-transition: all 0.3s linear;
+  }
+
+/* code */
 code {
-    font-family:"Cascadia code", "Courier New", monospace!important;
-    background-color: rgba(193, 226, 240, 0.5)!important;
-    border: 1px solid #D3D3D3;
+  padding-left: 0.3rem;
+  padding-right: 0.3rem;
+  font-family: var(--font-code);
+  background-color: var(--primary-light)!important;
+  border-radius: 5px;
 }
-pre{
-    background:rgba(255, 255, 255, 1)!important;
+
+pre {
+  background-color: transparent!important;
 }
+
 pre code {
-	margin: 24px 24px!important;
-	display: block!important;
-	box-shadow: 0 0 6px 2px rgba(151, 151, 151, 0.9);
-    border-top: rgb(244, 244, 244) solid 35px;
-    background-color: rgba(193, 226, 240, 0.5)!important;
-    position:relative;
-	line-height: 1.8rem;
-	font-size: 1rem;
-	font-weight: 380;
-	border-radius: 12px;
-    font-family:"Cascadia code", "Courier New", monospace!important;
+margin: 1rem 1rem!important;
+display: block;
+/* box-shadow: 0 0 6px 2px var(--primary-head); */
+border-top: var(--bg-bp) solid 1.8rem;
 
-    padding: 0px 4px;
+background-color: var(--primary-head)!important;
+position:relative;
+line-height: 1.8rem;
+font-size: 1rem;
+font-weight: 380;
+border-radius: 12px;
 
-    white-space: pre-wrap;
+font-family: var(--font-code);
+padding: 0px 0.7rem;
+white-space: pre-wrap;
 
-    background-image: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.1) 50%);
-    background-size: 100% 3.6rem; /* 调整为行高的两倍 */
-
+background-image: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.1) 30%);
+background-size: 80% 3.6rem!important; 
+background-position: 0 1.8rem;
 }
-
 
 pre code:before {
-	content: '';
-	background: green;
-	box-shadow: 23px 0 rgb(128, 128, 128), 45px 0 red;
-	border-radius: 50%;
-	margin-top: -1.6rem;
-	position: absolute;
-	right: 56px;
-	height: 12px;
-	width: 12px;
+content: '';
+background: var(--primary-head);
+box-shadow: 23px 0 var(--text-dark), 45px 0 var(--accent);
+border-radius: 50%;
+margin-top: -1.2rem;
+position: absolute;
+right: 56px;
+height: 12px;
+width: 12px;
 }
 
 pre code:after {
-    position: absolute;
-    font-family: 'Lucida calligraphy'; /* 修改字体为 Brush Script */
-    font-size: 24px; /* 修改字体大小为 24px */
-    color: #8B0000; /* 修改字体颜色为洋红色 */
-    font-weight:bold;
-    /*margin-top: -1.6rem;*/
-	margin-top: -1.6rem;
-	top: -5px;
-	left: 1.5%;
-	height: 12px;
-	width: 12px;
-
-    font-size: 1rem;
-    letter-spacing: 1px;
+position: absolute;
+font-family: 'Lucida calligraphy';
+font-size: 22px; 
+color: var(--accent); 
+font-weight: bold;
+margin-top: -1.4rem;
+top: -5px;
+left: 3%;
+height: 12px;
+width: 12px;
+font-size: 1rem;
+letter-spacing: 1px;
 }
+
+/* —————————————————————————————————————————————————————————A————————————————————————————————————————————————————————— */
 code.language-TXT:after,
 code.language-txt:after {
-    content: 'TXT';
+  content: 'TXT';
 }
 
-/* 以下为代码语言显示语句 */
-/* —————————————————————————————————————————————————————————A————————————————————————————————————————————————————————— */
 code.language-ABAP:after,
 code.language-abap:after {
-  content: 'ABAP';
+content: 'ABAP';
 }
 
 code.language-apl:after,
 code.language-APL:after {
-  content: 'APL';
+content: 'APL';
 }
 
 code.language-asciiarmor:after,
 code.language-ASCIIARMOR:after {
-  content: 'ASCII-Armor';
+content: 'ASCII-Armor';
 }
 
 code.language-ASN1:after,
 code.language-asn1:after {
-  content: 'ASN.1';
+content: 'ASN.1';
 }
 
 code.language-asp:after,
 code.language-ASP:after {
-  content: 'ASP';
+content: 'ASP';
 }
 
 /* —————————————————————————————————————————————————————————B————————————————————————————————————————————————————————— */
 code.language-bash:after,
 code.language-Bash:after {
-  content: 'Bash';
+content: 'Bash';
 }
 
 code.language-basic:after,
 code.language-Basic:after {
-  content: 'BASIC';
+content: 'BASIC';
 }
 
 
 /* —————————————————————————————————————————————————————————C————————————————————————————————————————————————————————— */
 code.language-C:after,
 code.language-c:after {
-  content: 'C';
+content: 'C';
 }
 
 
 code.language-csharp:after,
 code.language-CSharp:after {
-  content: 'C#';
+content: 'C#';
 }
 
 code.language-CPP:after,
 code.language-cpp:after {
-  content: 'C#';
+content: 'C#';
 }
 
 code.language-cassandra:after,
 code.language-Cassandra:after {
-  content: 'Cassandra';
+content: 'Cassandra';
 }
 
 code.language-ceylon:after,
 code.language-Ceylon:after {
-  content: 'Ceylon';
+content: 'Ceylon';
 }
 
 code.language-clike:after,
 code.language-Clike:after {
-  content: 'C-like';
+content: 'C-like';
 }
 
 code.language-clojure:after,
 code.language-clojure:after {
-  content: 'Clojure';
+content: 'Clojure';
 }
 
 code.language-CMake:after,
 code.language-cmake:after {
-  content: 'CMake';
+content: 'CMake';
 }
 
 code.language-cobol:after,
 code.language-COBOL:after {
-  content: 'COBOL';
+content: 'COBOL';
 }
 
 code.language-coffeescript:after,
 code.language-CoffeeScript:after {
-  content: 'CoffeeScript';
+content: 'CoffeeScript';
 }
 
 code.language-commonlisp:after,
 code.language-CommonLisp:after {
-  content: 'Common Lisp';
+content: 'Common Lisp';
 }
 
 code.language-CQL:after,
 code.language-cql:after {
-  content: 'CQL';
+content: 'CQL';
 }
 
 code.language-crystal:after,
 code.language-Crystal:after {
-  content: 'Crystal';
+content: 'Crystal';
 }
 
 code.language-css:after,
 code.language-CSS:after {
-  content: 'CSS';
+content: 'CSS';
 }
 
 code.language-cypher:after,
 code.language-Cypher:after {
-  content: 'Cypher';
+content: 'Cypher';
 }
 
 code.language-cython:after,
 code.language-Cython:after {
-  content: 'Cython';
+content: 'Cython';
 }
 
 
 /* —————————————————————————————————————————————————————————D————————————————————————————————————————————————————————— */
 code.language-D:after,
 code.language-d:after {
-  content: 'D';
+content: 'D';
 }
 
 code.language-dart:after,
 code.language-Dart:after {
-  content: 'Dart';
+content: 'Dart';
 }
 
 code.language-diff:after,
 code.language-Diff:after {
-  content: 'Diff';
+content: 'Diff';
 }
 
 code.language-django:after,
 code.language-Django:after {
-  content: 'Django';
+content: 'Django';
 }
 
 code.language-dockerfile:after,
 code.language-Dockerfile:after {
-  content: 'Dockerfile';
+content: 'Dockerfile';
 }
 
 code.language-dtd:after,
 code.language-DTD:after {
-  content: 'DTD';
+content: 'DTD';
 }
 
 code.language-Dylan:after,
 code.language-dylan:after {
-  content: 'Dylan';
+content: 'Dylan';
 }
 
 
 /* —————————————————————————————————————————————————————————E————————————————————————————————————————————————————————— */
 code.language-elixir:after,
 code.language-Elixir:after {
-  content: 'Elixir';
+content: 'Elixir';
 }
 
 code.language-Elm:after,
 code.language-elm:after {
-  content: 'Elm';
+content: 'Elm';
 }
 
 code.language-Embedded JS:after,
 code.language-embeddedjs:after {
-  content: 'Embedded JS';
+content: 'Embedded JS';
 }
 
 code.language-erlang:after,
 code.language-Erlang:after {
-  content: 'Erlang';
+content: 'Erlang';
 }
 
 
@@ -390,240 +452,240 @@ code.language-Erlang:after {
 
 code.language-fsharp:after,
 code.language-Fsharp:after {
-  content: 'F#';
+content: 'F#';
 }
 
 code.language-flow:after,
 code.language-Flow:after {
-  content: 'Flow';
+content: 'Flow';
 }
 
 code.language-forth:after,
 code.language-Forth:after {
-  content: 'Forth';
+content: 'Forth';
 }
 
 code.language-fortran:after,
 code.language-Fortran:after {
-  content: 'Fortran';
+content: 'Fortran';
 }
 
 
 /* —————————————————————————————————————————————————————————G————————————————————————————————————————————————————————— */
 code.language-gas:after,
 code.language-Gas:after {
-  content: 'Gas';
+content: 'Gas';
 }
 
 code.language-gfm:after,
 code.language-GFW:after {
-  content: 'GFW';
+content: 'GFW';
 }
 
 code.language-gherkin:after,
 code.language-Gherkin:after {
-  content: 'Gherkin';
+content: 'Gherkin';
 }
 
 code.language-glsl:after,
 code.language-GLSL:after {
-  content: 'GLSL';
+content: 'GLSL';
 }
 
 code.language-Go:after,
 code.language-go:after {
-  content: 'Go';
+content: 'Go';
 }
 
 code.language-Groovy:after,
 code.language-groovy:after {
-  content: 'Groovy';
+content: 'Groovy';
 }
 
 
 /* —————————————————————————————————————————————————————————H————————————————————————————————————————————————————————— */
 code.language-handlebars:after,
 code.language-Handlebars:after {
-  content: 'Handlebars';
+content: 'Handlebars';
 }
 
 code.language-haskell:after,
 code.language-Haskell:after {
-  content: 'Haskell';
+content: 'Haskell';
 }
 
 code.language-haxe:after,
 code.language-Haxe:after {
-  content: 'Haxe';
+content: 'Haxe';
 }
 
 code.language-htaccess:after,
 code.language-Htaccess:after {
-  content: 'Htaccess';
+content: 'Htaccess';
 }
 
 code.language-html:after,
 code.language-HTML:after {
-  content: 'HTML';
+content: 'HTML';
 }
 
 code.language-HTTP:after,
 code.language-http:after {
-  content: 'HTTP';
+content: 'HTTP';
 }
 
 code.language-hxml:after,
 code.language-HXML:after {
-  content: 'HXML';
+content: 'HXML';
 }
 
 
 /* —————————————————————————————————————————————————————————I————————————————————————————————————————————————————————— */
 code.language-IDL:after,
 code.language-idl:after {
-  content: 'IDL';
+content: 'IDL';
 }
 
 code.language-ini:after,
 code.language-INI:after {
-  content: 'INI';
+content: 'INI';
 }
 
 
 /* —————————————————————————————————————————————————————————J————————————————————————————————————————————————————————— */
 code.language-jade:after,
 code.language-Jade:after {
-  content: 'Jade';
+content: 'Jade';
 }
 
 code.language-java:after,
 code.language-Java:after {
-  content: 'Java';
+content: 'Java';
 }
 
 code.language-javascript:after,
 code.language-JavaScript:after,
 code.language-JS:after,
 code.language-js:after {
-  content: 'JavaScript';
+content: 'JavaScript';
 }
 
 code.language-jinja2:after,
 code.language-Jinja2:after {
-  content: 'Jinja2';
+content: 'Jinja2';
 }
 
 code.language-json:after,
 code.language-JSON:after {
-  content: 'JSON';
+content: 'JSON';
 }
 
 code.language-JSP:after,
 code.language-jsp:after {
-  content: 'JSP';
+content: 'JSP';
 }
 
 code.language-jsx:after,
 code.language-JSX:after {
-  content: 'JSX';
+content: 'JSX';
 }
 
 
 /* —————————————————————————————————————————————————————————K————————————————————————————————————————————————————————— */
 code.language-Kotlin:after,
 code.language-kotlin:after {
-  content: 'Kotlin';
+content: 'Kotlin';
 }
 
 
 /* —————————————————————————————————————————————————————————L————————————————————————————————————————————————————————— */
 code.language-LATEX:after,
 code.language-Latex:after {
-  content: 'LaTeX';
+content: 'LaTeX';
 }
 
 code.language-less:after,
 code.language-Less:after {
-  content: 'Less';
+content: 'Less';
 }
 
 code.language-lisp:after,
 code.language-LISP:after {
-  content: 'LISP';
+content: 'LISP';
 }
 
 code.language-livescript:after,
 code.language-LiveScript:after {
-  content: 'LiveScript';
+content: 'LiveScript';
 }
 
 code.language-Lua:after,
 code.language-lua:after {
-  content: 'Lua';
+content: 'Lua';
 }
 
 
 /* —————————————————————————————————————————————————————————M————————————————————————————————————————————————————————— */
 code.language-makefile:after,
 code.language-Makefile:after {
-  content: 'Makefile';
+content: 'Makefile';
 }
 
 code.language-mariadb:after,
 code.language-MariaDB:after {
-  content: 'MariaDB';
+content: 'MariaDB';
 }
 
 code.language-markdown:after,
 code.language-Markdown:after {
-  content: 'Markdown';
+content: 'Markdown';
 }
 
 code.language-mathematica:after,
 code.language-Mathematica:after {
-  content: 'Mathematica';
+content: 'Mathematica';
 }
 
 code.language-matlab:after,
 code.language-MATLAB:after {
-  content: 'MATLAB';
+content: 'MATLAB';
 }
 
 code.language-mbox:after,
 code.language-MBOX:after {
-  content: 'MBOX';
+content: 'MBOX';
 }
 
 code.language-mermaid:after,
 code.language-Mermaid:after {
-  content: 'Mermaid';
+content: 'Mermaid';
 }
 
 code.language-mssql:after,
 code.language-MSSQL:after {
-  content: 'MSSQL';
+content: 'MSSQL';
 }
 
 code.language-mysql:after,
 code.language-MySQL:after {
-  content: 'MySQL';
+content: 'MySQL';
 }
 
 
 /* —————————————————————————————————————————————————————————N————————————————————————————————————————————————————————— */
 code.language-nginx:after,
 code.language-Nginx:after {
-  content: 'Nginx';
+content: 'Nginx';
 }
 
 code.language-nim:after,
 code.language-Nim:after {
-  content: 'Nim';
+content: 'Nim';
 }
 
 code.language-nsis:after,
 code.language-NSIS:after {
-  content: 'NSIS';
+content: 'NSIS';
 }
 
 
@@ -632,245 +694,245 @@ code.language-objc:after,
 code.language-Obj-C:after,
 code.language-objective-c:after,
 code.language-Objective-C:after {
-  content: 'Objective-C';
+content: 'Objective-C';
 }
 
 code.language-ocaml:after,
 code.language-OCaml:after {
-  content: 'OCaml';
+content: 'OCaml';
 }
 
 code.language-octave:after,
 code.language-Octave:after {
-  content: 'Octave';
+content: 'Octave';
 }
 
 code.language-Oz:after,
 code.language-oz:after {
-  content: 'Oz';
+content: 'Oz';
 }
 
 
 /* —————————————————————————————————————————————————————————P————————————————————————————————————————————————————————— */
 code.language-pascal:after,
 code.language-Pascal:after {
-  content: 'Pascal';
+content: 'Pascal';
 }
 
 code.language-perl:after,
 code.language-Perl:after {
-  content: 'Perl';
+content: 'Perl';
 }
 
 code.language-perlsix:after,
 code.language-Perlsix:after {
-  content: 'Perl 6';
+content: 'Perl 6';
 }
 
 code.language-PGP:after,
 code.language-pgp:after {
-  content: 'PGP';
+content: 'PGP';
 }
 
 code.language-php:after,
 code.language-PHP:after {
-  content: 'PHP';
+content: 'PHP';
 }
 
 code.language-php+HTML:after {
-  content: 'PHP+HTML';
+content: 'PHP+HTML';
 }
 
 code.language-plsql:after,
 code.language-PL/SQL:after {
-  content: 'PL/SQL';
+content: 'PL/SQL';
 }
 
 code.language-powershell:after,
 code.language-PowerShell:after {
-  content: 'PowerShell';
+content: 'PowerShell';
 }
 
 code.language-properties:after,
 code.language-Properties:after {
-  content: 'Properties';
+content: 'Properties';
 }
 
 code.language-protobuf:after,
 code.language-Protobuf:after {
-  content: 'Protobuf';
+content: 'Protobuf';
 }
 
 code.language-pseudocode:after,
 code.language-Pseudocode:after {
-  content: 'Pseudocode';
+content: 'Pseudocode';
 }
 
 code.language-python:after,
 code.language-Python:after {
-  content: 'Python';
+content: 'Python';
 }
 
 code.language-Kotlin:after,
 code.language-kotlin:after {
-  content: 'Kotlin';
+content: 'Kotlin';
 }
 
 
 /* —————————————————————————————————————————————————————————Q————————————————————————————————————————————————————————— */
 code.language-Q:after,
 code.language-q:after {
-  content: 'Q';
+content: 'Q';
 }
 
 
 /* —————————————————————————————————————————————————————————R————————————————————————————————————————————————————————— */
 code.language-R:after,
 code.language-r:after {
-  content: 'R';
+content: 'R';
 }
 
 code.language-react:after,
 code.language-kotlin:after {
-  content: 'React';
+content: 'React';
 }
 
 code.language-reStructuredText:after,
 code.language-restructuredtext:after,
 code.language-rst:after {
-  content: 'reStructuredText';
+content: 'reStructuredText';
 }
 
 code.language-ruby:after,
 code.language-Ruby:after {
-  content: 'Ruby';
+content: 'Ruby';
 }
 
 code.language-Rust:after,
 code.language-rust:after {
-  content: 'Rust';
+content: 'Rust';
 }
 
 
 /* —————————————————————————————————————————————————————————S————————————————————————————————————————————————————————— */
 code.language-SAS:after,
 code.language-sas:after {
-  content: 'SAS';
+content: 'SAS';
 }
 
 code.language-scala:after,
 code.language-Scala:after {
-  content: 'Scala';
+content: 'Scala';
 }
 
 code.language-scheme:after,
 code.language-Scheme:after {
-  content: 'Scheme';
+content: 'Scheme';
 }
 
 code.language-scss:after,
 code.language-Sass:after {
-  content: 'Sass';
+content: 'Sass';
 }
 
 code.language-sequence:after,
 code.language-Sequence:after {
-  content: 'Sequence';
+content: 'Sequence';
 }
 
 pre[lang^='sh']:after,
 pre [lang^='SH']:after,
 code.language-shell:after {
-  content: 'Shell';
+content: 'Shell';
 }
 
 code.language-smalltalk:after,
 code.language-Smalltalk:after {
-  content: 'Smalltalk';
+content: 'Smalltalk';
 }
 
 code.language-solidity:after,
 code.language-Solidity:after {
-  content: 'Solidity';
+content: 'Solidity';
 }
 
 code.language-SPARQL:after,
 code.language-sparql:after {
-  content: 'SPARQL';
+content: 'SPARQL';
 }
 
 code.language-spreadsheet:after,
 code.language-Spreadsheet:after {
-  content: 'Spreadsheet';
+content: 'Spreadsheet';
 }
 
 code.language-sql:after,
 code.language-SQL:after {
-  content: 'SQL';
+content: 'SQL';
 }
 
 code.language-sqlite:after,
 code.language-SQLite:after {
-  content: 'SQLite';
+content: 'SQLite';
 }
 
 code.language-stylus:after,
 code.language-Stylus:after {
-  content: 'Stylus';
+content: 'Stylus';
 }
 
 code.language-swift:after,
 code.language-Swift:after {
-  content: 'Swift';
+content: 'Swift';
 }
 
 
 /* —————————————————————————————————————————————————————————T————————————————————————————————————————————————————————— */
 code.language-tcl:after,
 code.language-TCL:after {
-  content: 'TCL';
+content: 'TCL';
 }
 
 code.language-tex:after,
 code.language-TeX:after {
-  content: 'TeX';
+content: 'TeX';
 }
 
 code.language-tiddlywiki:after,
 code.language-TiddlyWiki:after {
-  content: 'TiddlyWiki';
+content: 'TiddlyWiki';
 }
 
 code.language-tiki wiki:after,
 code.language-Tikiwiki:after {
-  content: 'Tikiwiki';
+content: 'Tikiwiki';
 }
 
 code.language-toml:after,
 code.language-TOML:after {
-  content: 'TOML';
+content: 'TOML';
 }
 
 code.language-tsx:after,
 code.language-TSX:after {
-  content: 'TSX';
+content: 'TSX';
 }
 
 code.language-turtle:after,
 code.language-Turtle:after {
-  content: 'Turtle';
+content: 'Turtle';
 }
 
 code.language-twig:after,
 code.language-Twig:after {
-  content: 'Twig';
+content: 'Twig';
 }
 
 code.language-TypeScript:after,
 code.language-typescript:after,
 code.language-ts:after,
 code.language-TS:after {
-  content: 'TypeScript';
+content: 'TypeScript';
 }
 
 
@@ -880,88 +942,88 @@ code.language-TS:after {
 /* —————————————————————————————————————————————————————————V————————————————————————————————————————————————————————— */
 code.language-V:after,
 code.language-v:after {
-  content: 'V';
+content: 'V';
 }
 
 code.language-vb:after,
 code.language-VB:after {
-  content: 'VB';
+content: 'VB';
 }
 
 code.language-VBScript:after,
 code.language-vbscript:after {
-  content: 'VBScript';
+content: 'VBScript';
 }
 
 code.language-velocity:after,
 code.language-Velocity:after {
-  content: 'Velocity';
+content: 'Velocity';
 }
 
 code.language-verilog:after,
 code.language-Verilog:after {
-  content: 'Verilog';
+content: 'Verilog';
 }
 
 code.language-vhdl:after,
 code.language-VHDL:after {
-  content: 'VHDL';
+content: 'VHDL';
 }
 
 code.language-visual basic:after,
 code.language-Visual Basic:after {
-  content: 'Visual Basic';
+content: 'Visual Basic';
 }
 
 code.language-vue:after,
 code.language-Vue:after {
-  content: 'Vue';
+content: 'Vue';
 }
 
 
 /* —————————————————————————————————————————————————————————W————————————————————————————————————————————————————————— */
 code.language-web-idl:after,
 code.language-Web IDL:after {
-  content: 'Web IDL';
+content: 'Web IDL';
 }
 
 code.language-wiki:after,
 code.language-Wiki:after {
-  content: 'Wiki';
+content: 'Wiki';
 }
 
 
 /* —————————————————————————————————————————————————————————X————————————————————————————————————————————————————————— */
 code.language-xaml:after,
 code.language-XAML:after {
-  content: 'XAML';
+content: 'XAML';
 }
 
 code.language-xml:after,
 code.language-XML:after {
-  content: 'XML';
+content: 'XML';
 }
 
 code.language-xml-dtd:after,
 code.language-XML DTD:after {
-  content: 'XML DTD';
+content: 'XML DTD';
 }
 
 code.language-xquery:after,
 code.language-XQuery:after {
-  content: 'XQuery';
+content: 'XQuery';
 }
 
 
 /* —————————————————————————————————————————————————————————Y————————————————————————————————————————————————————————— */
 code.language-yacas:after,
 code.language-Yacas:after {
-  content: 'Yacas';
+content: 'Yacas';
 }
 
 code.language-yaml:after,
 code.language-YAML:after {
-  content: 'YAML';
+content: 'YAML';
 }
 
 
